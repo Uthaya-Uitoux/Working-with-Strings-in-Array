@@ -2,27 +2,24 @@ let elements=["uthaya","soundarya","sridhar","saravanan","bala","kanil","aanira"
 let input_elements=document.querySelector("#element")
 input_elements.textContent=elements.join(', ');
  
-function map(){
-    let mappedElement= elements.map( value => value.toUpperCase())
-    //console.log(mappedValue);
-    let upperCase=document.querySelector("#uppercase")
-    upperCase.textContent=mappedElement;
- 
+function map() {
+    let mappedElement = elements.map(value => value.toUpperCase());
+    let contentWrapper = document.getElementById("contentWrapper");
+    contentWrapper.textContent = mappedElement.join(',  ');
 }
-function filter(){
-    let valuemap= elements.filter(q =>q.length > 5)
-    let upperCase=document.querySelector("#uppercase")
-    upperCase.textContent=valuemap.join(' ');
+
+function filter() {
+    let valueMap = elements.filter(q => q.length > 5);
+    let contentWrapper = document.getElementById("contentWrapper");
+    contentWrapper.textContent = valueMap.join(' ');
 }
-function reduce(){
-    let val= elements.reduce((total,el) => total+el)
-    let upperCase=document.querySelector("#uppercase")
-    upperCase.textContent=val;
+
+function reduce() {
+    let val = elements.reduce((total, el) => total + el);
+    let contentWrapper = document.getElementById("contentWrapper");
+    contentWrapper.textContent = val;
 }
-function modify(){
-    elements.forEach(element => {
-        let upperCase=document.querySelector("#uppercase")
-    upperCase.textContent=elements;
-    console.log(element)
-    });
+function modify() {
+    let contentWrapper = document.getElementById("contentWrapper");
+    contentWrapper.textContent = elements.join(' ');
 }

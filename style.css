@@ -27,12 +27,19 @@
    width:130px;
    margin: 15px;
 }
-.result{
-    height:15px;
-    width:300px;
-    margin:15px;
-    font-size:10px;
-    border:2px dotted;
-    text-align:center;
-    padding:10px;
+.result {
+    display: block;
+    width: 100%; /* Ensure the button takes up the entire width */
+    height: auto; /* Allow the button to expand in height */
+    border: 2px solid;
+    overflow: visible; /* Allow content to overflow within the button */
 }
+
+.text {
+    display: block;
+    height: auto; /* Allow the content wrapper to expand in height */
+    overflow: visible; /* Allow the content to overflow within the content wrapper */
+    white-space: pre-wrap; /* Allow line breaks in the content */
+}
+
+
