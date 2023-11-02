@@ -22,4 +22,5 @@ function reduce() {
 function modify() {
     let contentWrapper = document.getElementById("contentWrapper");
     contentWrapper.textContent = elements.join(' ');
+    console.log(contentWrapper);
 }
